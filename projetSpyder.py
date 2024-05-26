@@ -340,7 +340,7 @@ def listeEtuCNV(): #liste des etudiants qui n'ont pas validé leur choix
     conn = pymysql.connect(
         host = 'localhost',
         user = 'root',
-        password = 'cytech0001',
+        password = mdpBDD,
         db = nomBDD,
         cursorclass = pymysql.cursors.DictCursor
     )
