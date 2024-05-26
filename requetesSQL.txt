@@ -1,0 +1,41 @@
+#### Réinitialiser la table
+
+use projet;  ## projet est le nom de la BDD
+drop table eleves;
+
+CREATE TABLE IF NOT EXISTS eleves(
+    mail VARCHAR(255),
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    filiere VARCHAR(255) NOT NULL,
+    note FLOAT,
+    affect BOOLEAN,
+    specialite TEXT,
+    id INT PRIMARY KEY,
+    age INT,
+    preferences VARCHAR(255)
+);
+
+
+
+INSERT INTO eleves(nom,prenom,mail,id,age,filiere,note) VALUES 
+('Lefort','Pierre','lefortpie@cy-tech.fr',5865,25,'GI',19),
+('Vincent','Alice','vincentali@cy-tech.fr',8064,23,'GMI',18),
+('Durand','Camille','durandcam@cy-tech.fr',2535,22,'GMF',15),
+('Bertrand','Elodie','bertrandelo@cy-tech.fr',7894,24,'GMF',14),
+('Laurent','Alexandre','laurentale@cy-tech.fr',970,23,'GI',14),
+('Henry','Thomas','henrytho@cy-tech.fr',4702,24,'GMI',14),
+('Garcia','Nicolas','garcianic@cy-tech.fr',8607,22,'GMI',14),
+('Roux','Nicolas','rouxnic@cy-tech.fr',3487,22,'GMI',14),
+('Dupont','Emma','dupontemm@cy-tech.fr',78,23,'GI',13),
+('Lefort','Laura','lefortlau@cy-tech.fr',3511,20,'GMF',13),
+('Henry','Jean','henryjea@cy-tech.fr',3143,20,'GMF',12),
+('Lefevre','Maxime','lefevremax@cy-tech.fr',8170,21,'GI',12),
+('Durand','Alice','durandali@cy-tech.fr',5088,25,'GMI',11),
+('Moreau','Pierre','moreaupie@cy-tech.fr',2634,22,'GMF',10),
+('Michel','Antoine','michelant@cy-tech.fr',5709,20,'GMF',8),
+('Martin','Elodie','martinelo@cy-tech.fr',9778,18,'GMI',8),
+('Simon','Marie','simonmar@cy-tech.fr',3802,20,'GMI',8),
+('Dupont','Gabriel','dupontgab@cy-tech.fr',6038,19,'GMI',7),
+('Henry','Alice','henryali@cy-tech.fr',4643,23,'GMF',5),
+('Moreau','Laura','moreaulau@cy-tech.fr',7899,20,'GI',3);	
